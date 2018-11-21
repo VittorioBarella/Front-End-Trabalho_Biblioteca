@@ -1,4 +1,25 @@
 /* INÍCIO ESTILO PRÓPRIO */
+	/* INÍCIO ESTILO INPUT BUSCA */
+  .input-search{
+		border:1px solid #CCC;
+		padding:5px 14px;
+		font-size:12px;
+		margin:10px 0;
+		float:left;
+		
+		-webkit-border-radius:15px;
+		   -moz-border-radius:15px;
+		    -ms-border-radius:15px;
+		     -o-border-radius:15px;
+		        border-radius:15px;
+	}
+		.input-search::-webkit-input-placeholder{ font-style:italic }
+		.input-search:-moz-placeholder			{ font-style:italic }
+    .input-search:-ms-input-placeholder		{ font-style:italic }
+
+	
+/* FIM ESTILO INPUT BUSCA */
+
 /* INÍCIO ESTILO PÁGINA INICIAL */
 .btn-menu{
   margin-bottom: 15px;

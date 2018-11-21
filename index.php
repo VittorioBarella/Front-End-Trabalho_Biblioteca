@@ -1,3 +1,26 @@
+<script type="text/javascript">
+
+ function buscar(){
+   $(function(){
+        $(".input-search").keyup(function(){
+            //pega o css da tabela 
+            var tabela = $(this).attr('alt');
+            if( $(this).val() != ""){
+                $("."+tabela+" tbody>tr").hide();
+                $("."+tabela+" td:contains-ci('" + $(this).val() + "')").parent("tr").show();
+            } else{
+                $("."+tabela+" tbody>tr").show();
+            }
+        }); 
+    });
+    $.extend($.expr[":"], {
+        "contains-ci": function(elem, i, match, array) {
+            return (elem.textContent || elem.innerText || $(elem).text() || "").toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+        }
+    });
+ }
+    
+</script>
 <!DOCTYPE html>
 <html lang="pt-br">
    <head>
@@ -10,6 +33,11 @@
       <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
       <!-- Custom styles for this template -->
       <link href="css/style.css" rel="stylesheet">
+
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+      <script type="text/javascript" src="jquery/jquery.quick.search.js"></script>
+      <script type="text/javascript" src="jquery/jquery.js"></script>
+         
    </head>
    <body>
       <div id="wrapper">
@@ -42,8 +70,10 @@
             <a href="#menu-toggle" class="btn btn-secondary btn-menu" id="menu-toggle">Menu</a>
          </div>
          <h2> Tabela </h2>
+
+         <input type="text" class="input-search" alt="lista-clientes" placeholder="Buscar..." onclick="buscar()" />
          <div class="tabela">
-            <table class="table table-striped table-bordered">
+            <table class="table table-striped table-bordered lista-clientes">
                <thead>
                   <tr>
                      <th scope="col">#</th>
