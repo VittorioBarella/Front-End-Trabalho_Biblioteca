@@ -17,7 +17,7 @@
       <div id="sidebar-wrapper">
          <ul class="sidebar-nav">
             <li class="sidebar-brand">
-               <a href="index.php">
+               <a href="index.html">
                Página Inicial
                </a>
             </li>
@@ -25,7 +25,7 @@
                <a href="form_cadastraAutores.php">Cadastro de Autores</a>
             </li>
             <li>
-               <a href="form_cadastraLivros.php">Cadastro de Livros</a>
+               <a href="form_cadastraClientes.php">Cadastro de Clientes</a>
             </li>
          </ul>
       </div>
@@ -43,25 +43,21 @@
          </div>
          <form>
             <div class="form-group">
-               <label for="formGroupExampleInput">Example label</label>
-               <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+               <label for="formGroupExampleInput">Id Autor:</label>
+               <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Id Autor">
             </div>
             <div class="form-group">
-               <label for="formGroupExampleInput2">Another label</label>
-               <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+               <label for="formGroupExampleInput2">Nome do Autor:</label>
+               <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nome do Autor">
             </div>
          </form>
          <form>
             <div class="form-group">
-               <label for="formGroupExampleInput">Example label</label>
-               <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
-            </div>
-            <div class="form-group">
-               <label for="formGroupExampleInput2">Another label</label>
-               <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+               <label for="formGroupExampleInput">País de Origem:</label>
+               <input type="text" class="form-control" id="formGroupExampleInput" placeholder="País de Origem">
             </div>
             <button class="btn btn-primary" type="submit">Cadastrar Autor</button>
-            <a href="index.php"><button type="button" class="btn btn-success">Visualizar</button></a>
+            <a href="index.html"><button type="button" class="btn btn-success">Visualizar</button></a>
          </form>
          <!-- Bootstrap core JavaScript -->
          <script src="jquery/jquery.min.js"></script>
